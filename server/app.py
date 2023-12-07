@@ -1,23 +1,21 @@
 #!/usr/bin/env python3
-
-# Standard library imports
-
-# Remote library imports
+from flask_cors import cross_origin
 from flask import request
 from flask_restful import Resource
 
 # Local imports
-from config import app, db, api
-# Add your model imports
+from config import app, db
+from models import User, Post
+from flask import Flask
 
 
-# Views go here!
-
-@app.route('/')
-def index():
-    return '<h1>Project Server</h1>'
 
 
-if __name__ == '__main__':
+@app.route("/")
+@cross_origin()
+def hello_world():
+    return "<p>Hello, World!</p>"
+
+
+if __name__ == "__main__":
     app.run(port=8000, debug=True)
-
