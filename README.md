@@ -355,3 +355,12 @@ Happy coding!
 - [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)
 - [Python Circular Imports - StackAbuse](https://stackabuse.com/python-circular-imports/)
 - [Flask-CORS](https://flask-cors.readthedocs.io/en/latest/)
+
+
+lsof -i :5000
+
+lsof -i :3000
+
+    honcho start -f Procfile.dev
+
+
